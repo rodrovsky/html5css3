@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		body {
+			font-family: sans-serif;
+		}
+
+		.page {
+			margin: 0 auto;
+			width: 940px;
+			padding: 10px;
+			background-color: #E8E8E8;
+		}
+
+		.posts {
+			float: left;
+			width: 600px;
+		}
+
+		aside {
+			background-color: #FFFBE4;
+			border: 1px solid #C9BC8F;
+			float: right;
+			padding: 10px;
+			width: 200px;
+		}
+
+		aside h3 {
+			margin: 0;
+		}
+
+
+
+		h1 {
+			float: left;
+			margin: 0 0 20px;
+		}
+
+		.timestamp {
+			background-color: #000;
+			color: #FFF;
+			float: right;
+			font-size: 0.9em;
+			margin-top: 10px;
+			padding: 5px 10px;
+		}
+
+		p {
+			clear: both;
+		}
+
+		.clearfix::after {
+			content: '';
+			display: table; /* produz o mesmo resultado de se colocar um div vazio no final da div */
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+
+<div class="page clearfix">
+	<section class="posts">
+		
+		<article>
+			<h1><a href="#">Título do post #1</a></h1>
+			<span class="timestamp">3 semanas atrás</span>
+			<p>
+				uma breve descrição sobre o assunto abordado no post número 1...
+			</p>
+		</article>
+
+		<article>
+			<h1><a href="#">Título do post #2</a></h1>
+			<span class="timestamp">3 semanas atrás</span>
+			<p>
+				uma breve descrição sobre o assunto abordado no post número 2...
+			</p>
+		</article>
+
+	</section>
+
+	<aside>
+		<h3>Veja outros posts</h3>
+		<ol>
+			<li><a href="#">Post #3</a></li>
+			<li><a href="#">Post #4</a></li>
+			<li><a href="#">Post #5</a></li>
+			<li><a href="#">Post #6</a></li>
+		</ol>
+	</aside>
+</div>
+
+</body>
+</html>
