@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Email</title>
+	<style>
+		body {
+			font-family: sans-serif;
+		}
+
+		label {
+			display: inline-block;
+			font-size: 0.9em;
+			font-weight: bold;
+			width: 90px;
+			vertical-align: top;
+		}
+
+		input, textarea {
+			display: inline-block;
+			width: 200px;
+			border: 1px solid #CCC;
+			box-shadow: inset 2px 2px 2px #EEE;
+			font-size: 0.9em;
+			padding: 2px 5px;
+		}
+
+		textarea {
+			height: 100px;
+		}
+
+		.hint {
+			background-color: #FFFBE4;
+			border: 1px solid #CCC;
+			border-radius: 3px;
+			box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+			display: none;
+			font-size: 0.8em;
+			margin-left: 20px;
+			padding: 3px;
+		}
+
+		input:focus + .hint, textarea:focus + .hint {
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<form method="post" action="">
+		<p>
+			<label for="email">E-mail:</label>
+			<input type="email" id="email" name="email">
+			<span class="hint">por exemplo, seunome@dominio.com.</span>
+		</p>
+
+		<p>
+			<label for="subject">Assunto:</label>
+			<input type="subject" id="subject" name="subject">
+			<span class="hint">Nos diga qual é seu problema ou ideia.</span>
+		</p>
+
+		<p>
+			<label for="content">Mensagem:</label>
+			<textarea id="content"></textarea>
+			<span class="hint">Escreva sua mensagem, em até 500 caracteres.</span>
+		</p>
+
+		<button>Enviar mensagem</button>
+	</form>
+</body>
+</html>
