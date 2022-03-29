@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Galeria - animações CSS3</title>
+	<style>
+		body {
+			font-family: sans-serif;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		li {
+			float: left;
+			margin-left: 10px;
+			position: relative;
+			transition: transform 0.2s linear;
+		}
+
+		li:nth-child(even) {
+			transform: rotate(5deg);
+		}
+
+		li:nth-child(odd) {
+			transform: rotate(-5deg);
+		}
+
+		li:hover {
+			transform: scale(1.3);
+			z-index: 1;
+		}
+
+		span {
+			color: #153755;
+			display: block;
+			font-weight: bold;
+			margin-top: 5px;
+			text-align: center;
+			width: 140px;
+		}
+	</style>
+</head>
+<body>
+
+<h1>Indicados ao Oscar de melhor ator em 2022</h1>
+
+<ul>
+	<li>
+		<img src="img/javier-bardem.jpg" alt="Javier Bardem">
+		<span>Javier Bardem</span>
+	</li>
+	<li>
+		<img src="img/benedict-cumberbatch.jpg" alt="Benedict Cumberbatch">
+		<span>Benedict Cumberbatch</span>
+	</li>
+	<li>
+		<img src="img/andrew-garfield.png" alt="Andrew Garfield">
+		<span>Andrew Garfield</span>
+	</li>
+	<li>
+		<img src="img/will-smith.png" alt="Will Smith">
+		<span>Will Smith</span>
+	</li>
+	<li>
+		<img src="img/denzel-washington.jpeg" alt="Denzel Washington">
+		<span>Denzel Washington</span>
+	</li>
+</ul>
+
+</body>
+</html>
