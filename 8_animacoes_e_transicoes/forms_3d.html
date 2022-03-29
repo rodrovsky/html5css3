@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form 3D com CSS3</title>
+	<style>
+		body {
+			font-family: sans-serif;
+		}
+
+		form {
+			font-size: 0.8em;
+			padding: 10px;
+		}
+
+		label {
+			display: block;
+			font-weight: bold;
+		}
+
+		input {
+			border: 1px solid #CCC;
+			box-shadow: inset 2px 2px 2px #EEE;
+			font-size: 0.9em;
+			padding: 2px 5px;
+		}
+
+		.container {
+			position: relative;
+			height: 300px;
+			width: 200px;
+			perspective: 500px;
+		}
+
+		.card {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border: 1px solid #CCC;
+			border-radius: 5px;
+			transform-style: preserve-3d;
+			transition: transform 1s;
+		}
+
+		.card section {
+			background-color: #FFF;
+			border-radius: 5px;
+			position: absolute;
+			backface-visibility: hidden;
+		}
+
+		.card.flipped {
+			transform: rotateY(180deg);
+		}
+
+		.signup {
+			transform: rotateY(180deg);
+		}
+	</style>
+</head>
+<body>
+
+<div class="container">
+<div class="card">
+
+<section class="signup">
+	<form>
+		<h2>Cadastre-se agora!</h2>
+
+		<p>
+			<label for="account_email">E-mail</label>
+			<input type="email" id="account_email">
+		</p>
+
+		<p>
+			<label for="account_password">Senha</label>
+			<input type="password" id="account_password">
+		</p>
+
+		<p>
+			<label for="account_password_confirmation">Confirme a sua senha</label>
+			<input type="password" id="account_password_confirmation">
+		</p>
+
+		<p><button>Enviar!</button></p>
+
+		<a href="javascript:;" class="toggle">
+			Já estou cadastrado(a) no site
+		</a>
+	</form>
+</section>
+
+<section class="signin">
+	<form>
+		<h2>Entrar no site</h2>
+
+		<p>
+			<label for="user_email">E-mail</label>
+			<input type="email" id="user_email">
+		</p>
+
+		<p>
+			<label for="password">Senha</label>
+			<input type="password" id="user_password">
+		</p>
+
+		<p><button>Enviar!</button></p>
+
+		<a href="javascript:;" class="toggle">Quero me cadastrar</a>
+	</form>
+</section>
+
+</div>
+</div>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+jQuery(function($){
+	$('section').on('click','a',function(){
+		$('.card').toggleClass('flipped');
+	});
+});
+</script>
+</body>
+</html>
